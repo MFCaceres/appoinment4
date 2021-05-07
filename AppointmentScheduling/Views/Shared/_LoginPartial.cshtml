@@ -1,7 +1,12 @@
-﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Microsoft.AspNetCore.Identity.IdentityUser> SignInManager
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<AppointmentScheduling.Models.ApplicationUser> SignInManager
 @if (SignInManager.IsSignedIn(User))
 {
-
+    <form id="LogoutForm" asp-action="Logoff" asp-controller="Account">
+        <ul class="nav navbar-nav">
+            <li class="text-white nav-link">Hello @User.Identity.Name!</li>
+            <li class="nav-link text-white"><a href="javascript:document.getElementById('LogoutForm').submit()">Logoff</a></li>
+        </ul>
+    </form>
 }
 else
 {
@@ -12,7 +17,7 @@ else
     </li>
     <li>
     @*@Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "LoginLink" })*@
-    <a class="nav-link text-white " id="LoginLink" asp-controller="Account" asp-action="Login">Register</a>
+    <a class="nav-link text-white " id="LoginLink" asp-controller="Account" asp-action="Login">Login</a>
     </li>
 </ul>
 }
