@@ -384,3 +384,5 @@ C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Deb
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Debug\net5.0\ref\AppointmentScheduling.dll
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Debug\net5.0\AppointmentScheduling.pdb
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Debug\net5.0\AppointmentScheduling.genruntimeconfig.cache
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\Humanizer.dll
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
