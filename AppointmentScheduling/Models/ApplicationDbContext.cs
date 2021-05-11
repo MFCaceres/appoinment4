@@ -10,5 +10,6 @@ namespace AppointmentScheduling.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>option) : base(option) { }
+        public DbSet<Appointment> Appointments { get; set; }
     }
 }
