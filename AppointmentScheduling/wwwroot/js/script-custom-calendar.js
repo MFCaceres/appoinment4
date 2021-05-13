@@ -7,22 +7,52 @@ $(document).ready(function () {
 
     InitializeCalendar();
 });
-
+var calendar;
 function InitializeCalendar() {
     try {
         var calendarEl = document.getElementById('calendar');
         if (calendarEl != null) {
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+            calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 headerToolbar: {
                     left: 'prev,next,today',
-                    center: 'Title',
+                    center: 'title',
                     right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
                 selectable: true,
                 editable: false,
                 select: function (event) {
                     onShowModal(event, null);
+                },
+                eventDisplay: 'block',
+                events: function (fetchInfo, successCallback, failureCallback) {
+                    $.ajax({
+                        url: routeURL + '/api/Appointment/GetCalendarData?doctorId=' + $("#doctorId").val(),
+                        type: 'GET',
+                        dataType: 'JSON',
+                        success: function (response) {
+                            var events = [];
+                            if (response.status === 1) {
+                                $.each(response.dataenum, function (i, data) {
+                                    events.push({
+                                        title: data.title,
+                                        description: data.description,
+                                        start: data.startDate,
+                                        end: data.endDate,
+                                        backgroundColor: data.isDoctorApproved ? "#28a745" : "#dc3545",
+                                        borderColor: "#162466",
+                                        textColor: "white",
+                                        id: data.id
+                                    });
+                                })
+                            }
+                            successCallback(events);
+                        },
+                        error: function (xhr) {
+                            $.notify("Error", "error");
+                        }
+                    });
+
                 }
             });
             calendar.render();
@@ -59,7 +89,7 @@ function onSubmitForm() {
             data: JSON.stringify(requestData),
             contentType: 'application/json',
             success: function (response) {
-                if (response.status == 1 || response.status == 2) {
+                if (response.status === 1 || response.status === 2) {
                     $.notify(response.message, "success");
                     onCloseModal();
                 }
