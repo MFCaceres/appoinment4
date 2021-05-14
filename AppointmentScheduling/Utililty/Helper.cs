@@ -24,14 +24,23 @@ namespace AppointmentScheduling.Utility
         public static string somethingWentWrong = "Something went wront, Please try again.";
         public static int success_code = 1;
         public static int failure_code = 0;
-        public static List<SelectListItem> GetRoleForDropDown()
+        public static List<SelectListItem> GetRoleForDropDown(bool isAdmin)
         {
-            return new List<SelectListItem>
-            {
+            if (isAdmin) {
+                return new List<SelectListItem>
+                {
                 new SelectListItem{Value=Helper.Admin,Text=Helper.Admin},
+                };
+            }
+            else
+            {
+                return new List<SelectListItem>
+            {
                 new SelectListItem{Value=Helper.Doctor,Text=Helper.Doctor},
                 new SelectListItem{Value=Helper.Patient,Text=Helper.Patient}
             };
+            }
+            
         }
         public static List<SelectListItem> GetTimeDropDown()
         {

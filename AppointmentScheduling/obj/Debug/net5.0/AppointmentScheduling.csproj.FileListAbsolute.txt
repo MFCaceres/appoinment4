@@ -101,7 +101,6 @@ C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Deb
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
@@ -436,3 +435,8 @@ C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Deb
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Debug\net5.0\Razor\Views\Appointment\Index.cshtml.g.cs
 C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\obj\Debug\net5.0\Razor\Views\Shared\_AddEditAppointment.cshtml.g.cs
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\AppointmentScheduling.StaticWebAssets.xml
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\Mailjet.Client.dll
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\user\Desktop\dotnet\AppointmentScheduling\AppointmentScheduling\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
