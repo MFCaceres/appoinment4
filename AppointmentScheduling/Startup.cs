@@ -1,3 +1,4 @@
+using AppointmentScheduling.DbInitializer;
 using AppointmentScheduling.Models;
 using AppointmentScheduling.Services;
 using AppointmentScheduling.Utililty;
@@ -35,6 +36,7 @@ namespace AppointmentScheduling
             services.AddScoped<IEmailSender, EmailSender>();
             services.AddTransient<IAppointmentService, AppointmentService>();
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IDbInitializer, DbInitializer.DbInitializer > ();
             services.AddHttpContextAccessor();
             services.AddDistributedMemoryCache();
             services.AddSession(option =>
@@ -46,7 +48,7 @@ namespace AppointmentScheduling
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -67,7 +69,7 @@ namespace AppointmentScheduling
 
             app.UseAuthorization();
             app.UseSession();
-
+            dbInitializer.initalize();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
